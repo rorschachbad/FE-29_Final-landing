@@ -1,0 +1,33 @@
+@import './variables.scss';
+@import './cdn.scss';
+@import './fonts.scss';
+@import './header.scss';
+@import './services.scss';
+@import './work.scss';
+@import './ourteam.scss';
+@import './slider.scss';
+@import './downloadhere.scss';
+@import './contacts.scss';
+@import './footer.scss';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  html {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .container {
+    position: relative;
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: auto;
+    @media (max-width: 1024px) {
+        max-width: 984px;
+    }
+  }

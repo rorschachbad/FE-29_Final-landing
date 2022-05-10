@@ -1,0 +1,37 @@
+.download {
+    padding: 115px 0;
+    background-color: #E5E5E5;
+    &-title {
+        text-align: center;
+        font-size: $_30px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    &-text {
+        margin-bottom: 50px;
+        text-align: center;
+        font-weight: 700;
+        font-size: $_18px;
+        text-transform: uppercase;
+    }
+    &-button {
+        .btn {
+            display: block;
+            text-align: center;
+            background-color: $orange;
+            font-weight: 900;
+            color: $white;
+            max-width: 23.125em;
+            margin: 0 auto;
+            padding: 20px 0;
+            transition: 0.2s;
+            &:hover {
+                background-color: $orangeDeep;
+            }
+            &:active {
+                background-color: $orange;
+                box-shadow: 4px 4px 30px $orange;
+            }
+        }
+    }
+}

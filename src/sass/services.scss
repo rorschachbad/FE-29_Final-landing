@@ -1,0 +1,52 @@
+.services {
+    padding: 100px 0;
+    background-color: $bgcolor;
+    .wrap {
+        margin: 0 -15px;
+       &-card {
+           display: flex;
+           margin-bottom: 90px;
+           flex-wrap: nowrap;
+           &:last-child {
+               margin-bottom: 0;
+           }
+           @media (max-width: 1024px) {
+            margin-bottom: 50px;
+        }
+       }
+    }
+    .card {
+        max-width: 370px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 10px;
+        
+        &-icon {
+            margin-bottom: 30px;
+            @media (max-width: 1024px) {
+                margin-bottom: 24px;
+                width: 85px;
+                height: 85px;
+                
+            }
+        }
+        &-title {
+            font-weight: 900;
+            font-size: $_24px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            @media (max-width: 1024px) {
+                font-size: $_18px;
+            }
+        }
+        &-text {
+            font-size: $_18px;
+            text-align: center;
+            @media (max-width: 1024px) {
+                font-size: $_14px;
+            }
+        }
+    }
+    
+}

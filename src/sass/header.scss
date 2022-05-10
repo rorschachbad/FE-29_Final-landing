@@ -1,0 +1,174 @@
+.header {
+    position: relative;
+    background: url(../img/bg/headbg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 0 120px;
+    // height: 100vh;
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: rgba(37, 43, 73, 80%);
+    }
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #BABBC5;
+        margin-bottom: 130px;
+        @media (max-width: 760px) {
+            border-bottom: none;
+        }
+        
+        
+        &-burger {
+            display: none;
+            position: relative;
+            width: 25px;
+            height: 18px;
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                background-color: #fff;
+                width: 100%;
+                height: 2px;
+                left: 0;
+            }
+            &::before {
+                top: 0px;
+            }
+            &::after {
+                bottom: 0px;
+            }
+            & span {
+                position: absolute;
+                background-color: #fff;
+                width: 100%;
+                height: 2px;
+                top: 8px;
+            }
+            @media (max-width: 760px) {
+                display: block;
+            }
+        }
+        &-logo {
+                vertical-align: middle;
+            &::after {
+                content: 'BOX';
+                color: $white;
+                font-size: 36px;
+                font-weight: 100;
+
+            }
+        }
+        &-list {
+            display: flex;
+            // padding: 25px 0;
+            justify-content: end;
+            &-item {
+                margin-left: 10px;
+                // &:first-child {
+                //     margin-left: 0;
+                // }
+                a {
+                    color: $white;
+                    font-size: $_13px;
+                    font-weight: 700;
+                    display: block;
+                    height: 100%;
+                    padding: 25px 15px;
+                    position: relative;
+                    &:hover::after {
+                        content: '';
+                        display: block;
+                        top: 97%;
+                        left: 0;
+                        width: 100%;
+                        height: 3px;
+                        background-color: $greyLight;
+                        position: absolute;
+                        color: $orangeDeep;
+                    }
+                    &:active {
+                        color: $orangeDeep;
+                    }
+                    &:active::after {
+                        color: $orangeDeep;
+                        background-color: $orangeDeep;
+                    }
+                    @media (max-width: 1024px) {
+                        font-size: $_12px;
+                    }
+                }
+            }
+            @media (max-width: 760px) {
+                display: none;
+            }
+        }
+    }
+    .header-content {
+        padding: 0 30px;
+        @media (max-width: 1024px) {
+            padding: 0 90px;
+        }
+    }
+
+
+    .title {
+        text-align: center;
+        margin-bottom: 32px;
+        color: $white;
+        font-size: $_64px;
+        text-transform: uppercase;
+        @media (max-width: 1024px) {
+            font-size: 48px;
+        }
+    }
+    &-text {
+        text-align: center;
+        margin-bottom: 80px;
+        color: $whiteOpacity;
+        font-size: $_24px;
+        line-height: 24px;
+        @media (max-width: 1024px) {
+            font-size: 18px;
+        }
+    }
+    .button {
+        a {
+            display: block;
+            text-align: center;
+            background-color: $orange;
+            font-weight: 900;
+            color: $white;
+            max-width: 23.125em;
+            margin: 0 auto;
+            padding: 20px 0;
+            transition: 0.2s;
+            &:hover {
+                background-color: $orangeDeep;
+            }
+            &:active {
+                background-color: $orange;
+                box-shadow: 4px 4px 30px $orange;
+            }
+            @media (max-width: 1061px) {
+                max-width: 317px;
+            }
+        }
+    }
+}
+.fa-facebook-f {
+    content: '\f39e';
+    display: block;
+    font-weight: 600;
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+}
